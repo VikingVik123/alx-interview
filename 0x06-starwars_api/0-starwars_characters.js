@@ -3,6 +3,7 @@ const url = "https://swapi-api.hbtn.io/api"
 const request = require('request');
 
 if (process.argv.length > 2) {
+    const movieId = process.argv[2];
     request(`${url}/films/${movieId}/`, (err, _, body) => {
         if (err) {
           console.log(err);
